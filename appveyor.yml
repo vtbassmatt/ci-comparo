@@ -1,8 +1,7 @@
 version: 1.0.{build}
 image: Ubuntu1804
-init:
-- sh: cd app
 install:
+- sh: cd app
 - sh: npm install
 cache: app/node_modules
 build_script:
