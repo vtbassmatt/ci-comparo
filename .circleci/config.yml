@@ -30,7 +30,7 @@ jobs:
 
       - save_cache:
           paths:
-            - node_modules
+            - app/node_modules
           key: v1-dependencies-{{ checksum "app/package.json" }}
 
       - run: cd app && npm run build
