@@ -35,7 +35,11 @@ jobs:
 
       - run: cd app && npm run build
 
+      - run: mkdir ~/artifact && cp app/index.html ~/artifact && cp -r app/dist/ ~/artifact
+
       # run tests!
       #- run: npm run test
 
-
+      - store_artifacts:
+          path: ~/artifact
+          destination: app
