@@ -1,7 +1,7 @@
 container:
   image: node:8
 
-test_task:
+build_task:
   node_modules_cache:
     folder: app/node_modules
     fingerprint_script: cat app/package-lock.json
