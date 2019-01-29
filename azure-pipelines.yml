@@ -1,0 +1,26 @@
+pool: { vmImage: ubuntu-16.04 }
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '8.x'
+
+- script: cd app && npm ci
+  displayName: Install packages
+
+- script: cd app && npm run build
+  displayName: Build
+
+# TODO: add tests
+
+- task: CopyFiles@2
+  inputs:
+    contents: |
+      app/dist/**/*
+      app/index.html
+    targetFolder: $(Build.ArtifactStagingDirectory)
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: App
+    targetPath: $(Build.ArtifactStagingDirectory)
