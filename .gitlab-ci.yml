@@ -1,0 +1,6 @@
+before_script:
+  - npm ci
+
+build:
+  script:
+    - npm run build
