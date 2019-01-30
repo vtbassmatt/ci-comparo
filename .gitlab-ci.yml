@@ -1,6 +1,12 @@
+image: node:8
+
+cache:
+  paths:
+  - app/node_modules/
+
 before_script:
-  - npm ci
+  - cd app && npm ci
 
 build:
   script:
-    - npm run build
+    - cd app && npm run build
