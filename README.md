@@ -16,6 +16,6 @@ If you want to add one, please do so in alphabetical order.
 
 ## Disclosure
 
-I (Matt Cooper) am a PM for Azure Pipelines.
-This isn't a marketing site or head-to-head competition between these systems.
-It doens't exercise all the amazing capabilities that the different CI systems offer.
+I was a PM for Azure Pipelines.
+This wasn't a marketing site or head-to-head competition between these systems.
+It didn't exercise all the amazing capabilities that the different CI systems offer.
